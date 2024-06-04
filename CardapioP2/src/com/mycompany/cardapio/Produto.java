@@ -7,6 +7,7 @@ public class Produto {
     private int quantidade;
     private String descricao;
 
+    // Atributo do método "Produto"
     public Produto(String nome, String categoria, double preco, int quantidade, String descricao) {
         this.nome = nome;
         this.categoria = categoria;
@@ -15,6 +16,7 @@ public class Produto {
         this.descricao = descricao;
     }
 
+    // Uso do método get
     public String getNome() {
         return nome;
     }
@@ -35,6 +37,7 @@ public class Produto {
         return descricao;
     }
 
+    // Formatação de frase
     @Override
     public String toString() {
         return String.format("Produto{nome='%s', categoria='%s', preco=%.2f, quantidade=%d, descricao='%s'}",
