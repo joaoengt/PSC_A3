@@ -8,12 +8,13 @@ public class Principal {
     private static ArrayList<Produto> produtos = new ArrayList<>();
 
     public static void main(String[] args) {
-        cadastrarProdutosIniciais();
-        menu();
+        Principal principal = new Principal();
+        principal.cadastrarProdutosIniciais();
+        principal.menu();
     }
 
     // Pre cadastro de produtos no sistema
-    private static void cadastrarProdutosIniciais() {
+    private void cadastrarProdutosIniciais() {
         produtos.add(new Produto("Hamburguer", "Comida", 15.99, 50, "Hamburguer artesanal com queijo"));
         produtos.add(new Produto("Pizza", "Comida", 39.99, 20, "Pizza de mussarela"));
         produtos.add(new Produto("Refrigerante", "Bebida", 4.50, 100, "Refrigerante de cola"));
@@ -24,7 +25,7 @@ public class Principal {
     }
 
     // Estrutura do menu principal
-    private static void menu() {
+    private void menu() {
         Scanner scanner = new Scanner(System.in);
         int opcao = 0;
         CadastrarProduto cadastrarProduto = new CadastrarProduto();
